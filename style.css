@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle, #1c1c3c, #0d0d1a);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: #ffdf6f;
+  position: relative;
+  z-index: 2;
+}
+
+.diwali-title {
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #ff00cc, #ffcc00, #ff0066, #ff6600);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: neon 1.5s infinite alternate, text-glow 2s infinite alternate;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 24px rgba(255, 0, 102, 0.6);
+}
+
+@keyframes neon {
+  0% {
+    filter: brightness(1);
+  }
+
+  100% {
+    filter: brightness(1.4);
+  }
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 102, 255, 0.8), 0 0 20px rgba(255, 204, 0, 0.6);
+  }
+
+  100% {
+    text-shadow: 0 0 18px rgba(255, 102, 255, 1), 0 0 32px rgba(255, 204, 0, 1);
+  }
+}
+
+.lord-ram-rangoli {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  animation: spin 15s linear infinite;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ff6f61, transparent);
+}
+
+.circle1 {
+  width: 180px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+  background: radial-gradient(circle, #ff6f61, transparent);
+}
+
+.circle2 {
+  width: 140px;
+  height: 140px;
+  top: 30px;
+  left: 30px;
+  background: radial-gradient(circle, #ffc107, transparent);
+}
+
+.circle3 {
+  width: 80px;
+  height: 80px;
+  top: 60px;
+  left: 60px;
+  background: radial-gradient(circle, #a0c4ff, transparent);
+}
+
+.bow {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  border-top: 8px solid #ff6f61;
+  border-radius: 50px 50px 0 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.arrow {
+  position: absolute;
+  width: 60px;
+  height: 5px;
+  background: #ffc107;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.flame {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #ff6f00, transparent);
+  border-radius: 50%;
+  top: 30%;
+  left: 55%;
+  animation: flame-flicker 0.6s infinite alternate;
+}
+
+.small-circles::before,
+.small-circles::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, #ff00cc, transparent);
+  border-radius: 50%;
+}
+
+.small-circles::before {
+  top: 0;
+  left: 100%;
+}
+
+.small-circles::after {
+  top: 100%;
+  left: 0;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flame-flicker {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+#fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
